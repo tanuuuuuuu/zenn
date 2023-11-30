@@ -2,7 +2,10 @@
 title: "dbt の persist_docs を source にも反映させたい！"
 emoji: "📌"
 type: "tech"
-topics: []
+topics:
+  - "python"
+  - "bigquery"
+  - "dbt"
 published: false
 ---
 
