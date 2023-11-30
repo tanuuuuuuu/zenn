@@ -1,0 +1,18 @@
+title: "Data Vault 2.0 モデリング入門（BigQuery × dbt）"
+summary: |-
+  Data Vault 2.0 について学べます。
+  主に、「Building a Scalable Data Warehouse with Data Vault 2.0」と「The Data Vault Guru」の 2 冊の本を参考に書いています。
+topics: []
+published: false
+price: 0
+toc_depth: 2
+chapters:
+  - "db5fbd"
+  - "c7b1cd"
+  - "40640f"
+  - "46d5ab"
+  - "e24e4b"
+  - "bf1a53"
+  - "8a75b9"
+  - "765668"
+  - "ea56d0"

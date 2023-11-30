@@ -1,0 +1,20 @@
+{
+  "title": "LookML メモ",
+  "closed": false,
+  "archived": false,
+  "created_at": "2022-12-17",
+  "comments": [
+    {
+      "author": "tanuhack",
+      "created_at": "2022-12-17",
+      "body_markdown": "# キャッシュポリシーを変更する\nLooker は、デフォルトでキャッシュ（以前同じクエリが叩かれていれば、直接データベースを叩かないようにする機能）を 1 時間保持している。\n\n`datagroup` パラメータにキャッシングポリシーを設定し、`explore` の `persist_for` パラメータで実際に適用する。\n\n```json:model ファイル\ndatagroup: cache_policy{\n  // sql_triggerは1行1列を返すものを指定する（デフォルトで5分に1回実行される）\n  sql_trigger: select max(updated_at) from table;;\n  // 更新日が変わらない場合、24時間経つとキャッシュを更新する\n  max_cache_age: \"24 hours\"\n}\n\nexplore: <view_name>{\n  persist_with: cache_policy\n}\n```",
+      "body_updated_at": "2022-12-19"
+    },
+    {
+      "author": "tanuhack",
+      "created_at": "2022-12-19",
+      "body_markdown": "# UI / UX\n\n## Explore 画面\n```json: model ファイル\n// Exploreメニューに表示するカテゴリ名\nlabel: \"Amazon\"\n\nexplore: <view_name>{\n  // Exploreメニューに表示するモデル名\n  label: \"注文データ（obt_amazon_order）\"\n  // Explore画面に表示するビュー名\n  view_label: \"obt_amazon_order\"\n}\n```",
+      "body_updated_at": "2022-12-19"
+    }
+  ]
+}
