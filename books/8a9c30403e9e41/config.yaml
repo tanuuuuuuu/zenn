@@ -4,6 +4,7 @@ summary: |-
   主に、「Building a Scalable Data Warehouse with Data Vault 2.0」と「The Data Vault Guru」の 2 冊の本を参考に書いています。
 topics: []
 published: false
+allow_override: true
 price: 0
 toc_depth: 2
 chapters:
